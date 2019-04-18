@@ -1,0 +1,9 @@
+version: '3.2'
+
+services:
+  oms-ldap-interface:
+    build:
+      context: $PATH_OMS_LDAP_INTERFACE/../
+      dockerfile: docker/oms-ldap-interface/Dockerfile.dev
+    ports:
+      - "1389:1389"

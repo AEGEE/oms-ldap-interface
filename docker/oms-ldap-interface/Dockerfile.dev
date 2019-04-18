@@ -1,0 +1,14 @@
+# Can't use node 10 because of ldapjs incompatibility
+FROM node:8
+
+ADD package.json /usr/app/package.json
+ADD package-lock.json /usr/app/package-lock.json
+
+WORKDIR /usr/app
+
+RUN npm install
+
+ADD src /usr/app/src
+
+
+CMD npm start
